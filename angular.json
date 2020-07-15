@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bankai"
+    }
+  },
+  "defaultProject": "bankai",
+  "cli": {
+    "analytics": false
+  }
 }
