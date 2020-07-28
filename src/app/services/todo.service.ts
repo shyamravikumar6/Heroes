@@ -25,7 +25,11 @@ private Id:number;
                    this.todos = this.todos.filter(todo=>todo.id!=id);
              }
              addTodo(todo:string){
-                 let todos = {id:++this.Id,title:todo,completed:false};
+                 let todos = {id:this.genId(),title:todo,completed:false};
                     this.todos.push(todos);
+             }
+
+             genId():number{
+                  return  (this.todos==null?0:this.todos.length)+1;
              }
 }

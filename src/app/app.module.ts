@@ -9,6 +9,9 @@ import { FormComponent } from './forms/form/form.component';
 import { TodoService } from './services/todo.service';
 import {FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import{MaterialModule} from './module/material/material.module';
+import {MatButtonModule} from '@angular/material/button';
+import {CommonModule} from '@angular/common'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   
   providers: [TodoService],

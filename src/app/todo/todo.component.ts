@@ -20,7 +20,8 @@ export class TodoComponent implements OnInit {
     if(this.todos==null) this.todoService.reset();
   }
     addTodo(){
-      this.todoService.addTodo(this.todotext);
+
+      if(this.todotext!=null|| this.todotext.length!=0){this.todoService.addTodo(this.todotext);}
      this.todotext='';
     }
 

@@ -1,6 +1,9 @@
-<h2>TodoApp</h2>
+<button mat-raised-button>hello world</button>
 <app-todo></app-todo>
-    <div *ngFor="let todo of todoservice.gettodos()">
-      <app-todo-item [todo]="todo"></app-todo-item>
+          <div *ngFor="let todo of this.todoservice.gettodos()">
+            <app-todo-item [todo]="todo"></app-todo-item>
+          </div>
+
+
 
 
