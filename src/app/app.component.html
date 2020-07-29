@@ -1,4 +1,21 @@
-<button mat-raised-button>hello world</button>
+
+<h1>rom</h1>
+<mat-menu #appMenu="matMenu">
+ <button mat-menu-item [matMenuTriggerFor]="subMenu1">frontend</button>
+ <button mat-menu-item [matMenuTriggerFor]="subMenu2"> backend</button>
+</mat-menu>
+<button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+<mat-menu #subMenu1="matMenu">
+  <button  mat-menu-item> Angular</button>
+  <button mat-menu-item>React</button>
+  </mat-menu>
+  <mat-menu #subMenu2="matMenu">
+    <button  mat-menu-item> Nodejs</button>
+    <button mat-menu-item>Mongodb</button>
+    </mat-menu>
+<mat-slider min="0" max="100" step="1" value="1"></mat-slider>
+
+
 <app-todo></app-todo>
           <div *ngFor="let todo of this.todoservice.gettodos()">
             <app-todo-item [todo]="todo"></app-todo-item>

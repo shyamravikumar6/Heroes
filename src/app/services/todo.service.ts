@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Todo} from '../../models/Todo';
-
+import {Observable,of} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -18,7 +18,7 @@ private Id:number;
         }
       
          gettodos():Todo[]{
-             return this.todos;
+           return this.todos;
          }
    
              delettodo(id:number):void{
