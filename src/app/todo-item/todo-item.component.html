@@ -1,11 +1,11 @@
 <div class=todoWrapper>
 <div [ngClass]="setClasses()">
     <p>
-        <input  type="checkbox"  (change)="onToggle(todo)"/>
+        <input  type="checkbox"  (change)="onToggle()"/>
         
         {{todo.id}} {{todo.title}}
         
-        <button class="removeTodo" (click)="onDelete(todo) ">x</button>
+        <button class="removeTodo" (click)="onDelete() ">x</button>
         </p>
 </div>
 </div>  

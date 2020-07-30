@@ -10,8 +10,10 @@ import{Todo} from '../models/Todo';
 export class AppComponent {
   title = 'todo-list';
   opened=false;
+ 
+  
   constructor(public todoservice:TodoService) {
-     if(todoservice.gettodos()===null){this.todoservice.reset();}
+
   }
    
   

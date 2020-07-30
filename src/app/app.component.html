@@ -1,5 +1,5 @@
 
-<h1>rom</h1>
+<h1>Menu</h1>
 <mat-menu #appMenu="matMenu">
  <button mat-menu-item [matMenuTriggerFor]="subMenu1">frontend</button>
  <button mat-menu-item [matMenuTriggerFor]="subMenu2"> backend</button>
@@ -17,7 +17,7 @@
 
 
 <app-todo></app-todo>
-          <div *ngFor="let todo of this.todoservice.gettodos()">
+          <div *ngFor="let todo of this.todoservice.todos">
             <app-todo-item [todo]="todo"></app-todo-item>
           </div>
 

@@ -20,10 +20,14 @@ export class TodoItemComponent implements OnInit {
          }
               return classes;
        }
-            onToggle(todo){
+            onToggle(){
               this.todo.completed=!this.todo.completed;
+                let todos=this.todoservice.todos.filter( todo=>todo.id!=this.todo.id);
+                 todos.push(this.todo);
+                this.todoservice.setLocal(todos);
+              console.log("is clicked");
             }
-            onDelete(todo){
+            onDelete(){
               
                 this.todoservice.delettodo(this.todo.id);
             }

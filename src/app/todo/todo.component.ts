@@ -21,7 +21,7 @@ export class TodoComponent implements OnInit {
   }
     addTodo(){
 
-      if(this.todotext!=null|| this.todotext.length!=0){this.todoService.addTodo(this.todotext);}
+      if(this.todotext!=null &&  this.todotext.length!=0){this.todoService.addTodo(this.todotext);}
      this.todotext='';
     }
 
